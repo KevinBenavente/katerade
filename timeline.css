@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f0f7ff, #d1eaff);
+}
+
+h1 {
+  text-align: center;
+  color: #007bff;
+  position: relative;
+  top: 150px;
+}
+
+.timeline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: absolute;
+  top: 20%;
+  transform: translateY(-20%);
+  margin-bottom: 0;
+}
+
+.timeline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.timeline-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  height: 50px;
+  width: 50px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 10px;
+  text-align: center;
+  transition: transform 0.3s, background-color 0.3s;
+  cursor: pointer;
+  position: relative;
+}
+
+.timeline-item:hover {
+  background-color: #f0f4ff;
+  transform: scale(1.1);
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+
+.timeline-item:first-child::before,
+.timeline-item:last-child::before {
+  display: none;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #007bff;
+  top: 50%;
+  left: 0;
+  z-index: -1;
+  border-radius: 5px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-image,
+.modal-video,
+.modal-iframe {
+  display: none;
+  width: 75%;
+  height: auto;
+  margin: 0 auto 15px auto;
+}
+
+.modal-iframe {
+  height: 400px; /* Adjust height as needed */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-caption {
+  font-size: 1rem;
+  color: #555;
+}
+
+#buttonContainer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 65%;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
